@@ -1,13 +1,31 @@
-<div fxLayout="row" fxLayoutAlign="center stretch">
-  <div fxFlex="60">
-    <mat-card>
-      <mat-card-title>
-        <a mat-button color="primary" href="#">
-          <mat-icon inline="true" style="margin-right: 1rem; font-size: 1.2rem"
-            >home</mat-icon
-          >Sharefile
-        </a>
-      </mat-card-title>
-    </mat-card>
+<div fxLayout="column">
+  <mat-toolbar
+    color="primary"
+    class="mat-elevation-z5"
+    style="margin-bottom: 1.5rem"
+  >
+    <a mat-button>
+      <mat-icon style="margin-right: 0.6rem; font-size: 1.2rem">home</mat-icon>
+      Sharefile
+    </a>
+  </mat-toolbar>
+  <div fxLayoutAlign="center" fxFlex="60">
+    <div fxFlex="50" fxFlex.lt-md="0">
+      <mat-card>Actual content</mat-card>
+    </div>
   </div>
 </div>
+
+<!--
+<div fxFill>
+  <mat-toolbar color="primary" class="mat-elevation-z8">
+    <a mat-button>
+      <mat-icon style="margin-right: 0.6rem; font-size: 1.2rem">home</mat-icon>
+      Sharefile
+    </a>
+  </mat-toolbar>
+</div>
+<div fxFlex="60">
+  <mat-card>Hello World</mat-card>
+</div>
+-->
