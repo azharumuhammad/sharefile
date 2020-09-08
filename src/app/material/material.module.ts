@@ -5,6 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatStepperModule} from '@angular/material/stepper'; 
 
 const material: Array<any> = [
   FlexLayoutModule,
@@ -12,6 +13,7 @@ const material: Array<any> = [
   MatButtonModule,
   MatIconModule,
   MatToolbarModule,
+  MatStepperModule
 ];
 
 @NgModule({

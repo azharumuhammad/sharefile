@@ -9,23 +9,21 @@
       Sharefile
     </a>
   </mat-toolbar>
-  <div fxLayoutAlign="center" fxFlex="60">
-    <div fxFlex="50" fxFlex.lt-md="0">
-      <mat-card>Actual content</mat-card>
+  <div fxLayoutAlign="center" style="margin: 0 1.5rem">
+    <div fxFlex="60" fxFlex.lt-md="0">
+      <mat-card>
+        <mat-horizontal-stepper linear #stepper>
+          <mat-step>
+            <ng-template matStepLabel>Choose file</ng-template>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>Choose receiver</ng-template>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+          </mat-step>
+        </mat-horizontal-stepper>
+      </mat-card>
     </div>
   </div>
 </div>
-
-<!--
-<div fxFill>
-  <mat-toolbar color="primary" class="mat-elevation-z8">
-    <a mat-button>
-      <mat-icon style="margin-right: 0.6rem; font-size: 1.2rem">home</mat-icon>
-      Sharefile
-    </a>
-  </mat-toolbar>
-</div>
-<div fxFlex="60">
-  <mat-card>Hello World</mat-card>
-</div>
--->
