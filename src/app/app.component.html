@@ -13,8 +13,22 @@
     <div fxFlex="60" fxFlex.lt-md="0">
       <mat-card>
         <mat-horizontal-stepper linear #stepper>
-          <mat-step>
-            <ng-template matStepLabel>Choose file</ng-template>
+          <mat-step [stepControl]="filesFormGroup">
+            <form [formGroup]="filesFormGroup">
+              <ng-template matStepLabel>Choose files</ng-template>
+              <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input
+                  matInput
+                  placeholder="Last name, First name"
+                  formControlName="filesControl"
+                  required
+                />
+              </mat-form-field>
+              <div>
+                <button mat-button matStepperNext color="primary">Next</button>
+              </div>
+            </form>
           </mat-step>
           <mat-step>
             <ng-template matStepLabel>Choose receiver</ng-template>
