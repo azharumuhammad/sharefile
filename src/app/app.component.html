@@ -9,35 +9,5 @@
       Sharefile
     </a>
   </mat-toolbar>
-  <div fxLayoutAlign="center" style="margin: 0 1.5rem">
-    <div fxFlex="60" fxFlex.lt-md="0">
-      <mat-card>
-        <mat-horizontal-stepper linear #stepper>
-          <mat-step [stepControl]="filesFormGroup">
-            <form [formGroup]="filesFormGroup">
-              <ng-template matStepLabel>Choose files</ng-template>
-              <mat-form-field>
-                <mat-label>Name</mat-label>
-                <input
-                  matInput
-                  placeholder="Last name, First name"
-                  formControlName="filesControl"
-                  required
-                />
-              </mat-form-field>
-              <div>
-                <button mat-button matStepperNext color="primary">Next</button>
-              </div>
-            </form>
-          </mat-step>
-          <mat-step>
-            <ng-template matStepLabel>Choose receiver</ng-template>
-          </mat-step>
-          <mat-step>
-            <ng-template matStepLabel>Done</ng-template>
-          </mat-step>
-        </mat-horizontal-stepper>
-      </mat-card>
-    </div>
-  </div>
+  <app-share-ui></app-share-ui>
 </div>

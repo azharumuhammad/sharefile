@@ -1,0 +1,33 @@
+<div fxLayoutAlign="center" style="margin: 0 1.5rem">
+  <div fxFlex="60" fxFlex.lt-md="0">
+    <mat-card>
+      <mat-horizontal-stepper linear #stepper>
+        <mat-step [stepControl]="filesFormGroup">
+          <form [formGroup]="filesFormGroup">
+            <ng-template matStepLabel>Choose files</ng-template>
+            <input
+              #fileField
+              type="file"
+              hidden="true"
+              formControlName="fileControl"
+              (change)="fileOnChange()"
+            />
+            <button
+              mat-raised-button
+              color="primary"
+              (click)="fileField.click()"
+            >
+              Attach file
+            </button>
+          </form>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Choose receiver</ng-template>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </mat-card>
+  </div>
+</div>
