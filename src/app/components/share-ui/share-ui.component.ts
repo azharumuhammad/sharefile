@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, Form } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-share-ui',
@@ -17,7 +17,7 @@ export class ShareUiComponent implements OnInit {
     });
   }
 
-  fileOnChange(): void {
-    console.log(this.filesFormGroup.value.fileControl);
+  fileOnChange(event): void {
+    console.log(event.target.files);
   }
 }
