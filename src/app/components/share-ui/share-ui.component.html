@@ -5,17 +5,32 @@
         <mat-step [stepControl]="filesFormGroup">
           <form [formGroup]="filesFormGroup">
             <ng-template matStepLabel>Choose files</ng-template>
-            <div fxFill fxLayout="row" fxLayoutGap="10px">
-              <div fxFlex="6">
+            <div fxFill fxLayout="row" fxLayoutGap="1.3rem">
+              <div fxFlex="20">
                 <img
                   src="https://dummyimage.com/600x400/000/fff"
                   width="100%"
-                  height="36px"
-                  style="border: 2px; border-radius: 5px"
+                  class="img-border-sf"
                 />
               </div>
-              <div fxFlex>IMG_1203782719639217.jpg</div>
-              <div fxFlex="20">World</div>
+              <div fxFlex fxLayout="column">
+                <div fxFlex fxLayout="column">
+                  <div class="mat-body-strong">IMG_16283687.jpeg</div>
+                  <div class="mat-small">12KB</div>
+                </div>
+                <div fxLayout="row" style="margin-bottom: 0.2rem">
+                  <div fxFlex class="mat-body-2">Last modified: 12.9.20</div>
+                  <div class="mat-small">type: image/jpeg</div>
+                </div>
+              </div>
+              <div fxFlex="20" fxLayoutAlign="center center">
+                <mat-icon
+                  color="warn"
+                  style="margin-bottom: 1rem; font-size: 2rem"
+                >
+                  clear
+                </mat-icon>
+              </div>
             </div>
             <input
               type="file"
@@ -44,20 +59,3 @@
     </mat-card>
   </div>
 </div>
-
-<!--
-<input
-              #fileField
-              type="file"
-              hidden="true"
-              formControlName="fileControl"
-              (change)="fileOnChange()"
-            />
-            <button
-              mat-raised-button
-              color="primary"
-              (click)="fileField.click()"
-            >
-              Attach file
-            </button>
-            -->

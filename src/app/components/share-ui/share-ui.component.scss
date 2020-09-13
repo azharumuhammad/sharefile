@@ -1,1 +1,6 @@
+@import "~@angular/material/theming";
 
+.img-border-sf {
+  border: 0.3rem mat-color(mat-palette($mat-indigo)) solid;
+  border-radius: 7px;
+}
